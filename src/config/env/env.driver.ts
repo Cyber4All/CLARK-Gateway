@@ -13,9 +13,8 @@ import {
     NODE_ENV,
     NOTIFICATIONS_SERVICE_URI,
     PORT,
+    SECURED_DOWNTIME_SERVICE_URI,
     STANDARD_GUIDELINES_SERVICE_URI,
-    USER_SERVICE_URI,
-    UTILITY_SERVICE_URI,
 } from "../global.env";
 import * as dotenv from "dotenv";
 
@@ -121,8 +120,7 @@ class EnvConfig {
                 NOTIFICATIONS_SERVICE_URI,
                 CLARK_REPORTS_URI,
                 STANDARD_GUIDELINES_SERVICE_URI,
-                USER_SERVICE_URI,
-                UTILITY_SERVICE_URI,
+                SECURED_DOWNTIME_SERVICE_URI,
             ].includes(service)
         ) {
             throw new ServiceError(
@@ -147,8 +145,7 @@ const envConfig = new EnvConfig(process.env).ensureValues([
     NOTIFICATIONS_SERVICE_URI,
     CLARK_REPORTS_URI,
     STANDARD_GUIDELINES_SERVICE_URI,
-    USER_SERVICE_URI,
-    UTILITY_SERVICE_URI,
+    SECURED_DOWNTIME_SERVICE_URI,
 ]);
 
 if (envConfig.isProduction() || envConfig.isStaging()) {

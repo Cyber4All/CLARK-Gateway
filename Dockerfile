@@ -22,7 +22,6 @@ RUN npm cache clean --force \
 # Dev Stage
 #
 # Target for docker-compose development environments
-# Requires mounting or volume of ./src to /opt/app/src
 # ----------------------------------------------------------------
 FROM base as dev
 
@@ -34,7 +33,7 @@ RUN npm i -g nodemon \
     && npm i --ignore-scripts --only=development
 
 HEALTHCHECK --start-period=10s --retries=5 --timeout=10s \
-    CMD curl --fail http://localhost:3001 || exit 1   
+    CMD curl --fail http://localhost:3001 || exit 1  
 
 CMD ["dumb-init", "nodemon"]
 

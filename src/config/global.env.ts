@@ -42,14 +42,9 @@ export const STANDARD_GUIDELINES_SERVICE_URI =
     "STANDARD_GUIDELINES_SERVICE_URI";
 
 /**
- * URI target for the user-service
+ * URI target for the downtime-service
  */
-export const USER_SERVICE_URI = "USER_SERVICE_URI";
-
-/**
- * URI target for the utility-service
- */
-export const UTILITY_SERVICE_URI = "UTILITY_SERVICE_URI";
+export const SECURED_DOWNTIME_SERVICE_URI = "SECURED_DOWNTIME_SERVICE_URI";
 
 // ========================================================
 //                        Optional ENVS
