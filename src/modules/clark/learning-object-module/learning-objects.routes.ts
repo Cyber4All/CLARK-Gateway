@@ -74,8 +74,9 @@ export const LEARNING_OBJECTS_ROUTES: ProxyRoute[] = [
     },
     {
         method: HTTPMethod.DELETE,
-        path: "/users/:username/learning-objects/:learningObjectId/materials/files/:fileId",
+        path: "/learning-objects/:learningObjectId/materials/files/:fileId",
         auth: true,
+        target: envConfig.getUri(CLARK_SERVICE_URI),
     },
     {
         method: HTTPMethod.PATCH,
